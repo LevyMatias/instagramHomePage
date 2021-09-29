@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+    list-style: none;
+    font-size: 14px;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: #f5f5f5;
+}
+
+/* Conteiner principal */
+#wrapper {
+    width: 60%; /*determina a largura total de acordo com a largura do body*/
+    height: 100vh;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+/* Box da imagem do instagram */
+.phone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.insta-phone {
+    width: 720px; /* determinando a largura da imagem do celular na pagina */
+}
+
+/* box que tem os elementos para prosseguir com o login */
+.continue {
+    width: 45%; /* definindo a largura do conteiner do lado direito que é metade dos 100% "60%" do conteiner principal (Wrapper) */
+    min-height: 39rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.group {
+    width: 100%; /* 100% da largura da classe continue */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fafafa;
+    border: solid lightgray 1px;
+    padding: 1.3rem;
+}
+
+/* logo escrito instagram */
+.logo-insta {
+    height: 3rem;
+    margin-bottom: 15px;
+}
+
+/* foto de perfil */
+.profile {
+    width: 6rem;
+    margin-bottom: 20px;;
+}
+
+/* nth-child faz com que o primeiro group da classe seja alterado */
+.group:nth-child(1){
+    min-height: 19rem;
+}
+
+.form-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 80%;
+    height: 9rem;
+    margin-bottom: 1rem;
+}
+
+.form-box input {
+    padding: .6rem 0 .6rem .6rem;
+    outline: none;
+    border: solid lightgray 1px;
+    border-radius: 4px;
+}
+
+input[type=submit] {
+    background-color: #b3d0ff;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+}
+
+.entrar {
+    color: darkblue;
+    margin: 1rem 0;
+}
+
+.account {
+    color: #0095f6;
+    font-weight: 600;
+}
+
+.get-the-app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.get-app {
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+/* box das imagens para acessar o download dos apps */
+.download {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    align-items: center;
+}
+
+.get-app-img {
+    height: 40px; /* definindo o tamanho da imagens do download */
+}
+
+/* Media queries */
+
+@media (max-width: 1024px) {
+    #wrapper {
+        width: 90%;
+    }
+}
+
+@media (max-width: 650px){
+    #wrapper {
+        width: 90%;
+    }
+
+    .phone {
+        display: none;
+    }
+
+    .continue {
+        width: 100%;
+    }
+}
